@@ -1,4 +1,12 @@
 \documentclass[english,10pt]{beamer}
+\usepackage{pstricks}
+\usepackage{graphicx}
+\DeclareGraphicsExtensions{.pdf}
+\DeclareGraphicsRule{.pdf}{pdf}{.pdf}{}
+\DeclareGraphicsExtensions{.jpg}
+\DeclareGraphicsRule{. jpg}{jpg}{. jpg}{}
+\DeclareGraphicsExtensions{.svg}
+\DeclareGraphicsRule{. svg}{svg}{. svg}{}
 
 \title{Design for 3D Printing}
 \input{Common.tex}
@@ -20,6 +28,25 @@
   A number of items need to be considered when designing an object for 3D printing.  Some of them are generic while others may depend on the 3D printing technology used.
 \end{frame}
 
+\section{Measurements}
+\begin{frame}
+  \frametitle{Measurements}
+  A good question is, ``What does one unit in the CAD program translate to when printed out?''.  Depending on your application, the answer may range from mildly interesting to vitally important.  If you are creating a stand alone decorative object, you may not care much as long as the result is a reasonable size.  If, however, you are designing a part to physically interface with some existing items, the answer is vitally important.
+\end{frame}
+
+\section{First Layer}
+\begin{frame}
+  \frametitle{First Layer}
+  Depending on the type of printer and its settings, the first layer printed may be thinner or thicker that the subsequent layers.  This is usually accompanied with the material extending beyond or within the subsequent layers.  This effect is sometimes called ``elephant foot''.  The slicer program often has a setting for ``elephant foot compensation''.
+\end{frame}
+\begin{frame}
+  \frametitle{First Layer}
+  \begin{figure}
+    \input{Layers}
+    \caption{First Layer Problems}
+  \end{figure}
+\end{frame}
+
 \section{Overhangs}
 \begin{frame}
   \frametitle{Overhangs}
@@ -28,6 +55,10 @@
 \section{Holes and Voids}
 \begin{frame}
   \frametitle{Holes and Voids}
+  \begin{figure}
+    \input{Holes}
+    \caption{Desired Hole vs Actual Hole}
+  \end{figure}
 \end{frame}
 
 \end{document}
