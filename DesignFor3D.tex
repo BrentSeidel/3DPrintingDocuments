@@ -30,8 +30,27 @@
 
 \section{Measurements}
 \begin{frame}
-  \frametitle{Measurements}
+  \frametitle{Measurements (units)}
   A good question is, ``What does one unit in the CAD program translate to when printed out?''.  Depending on your application, the answer may range from mildly interesting to vitally important.  If you are creating a stand alone decorative object, you may not care much as long as the result is a reasonable size.  If, however, you are designing a part to physically interface with some existing items, the answer is vitally important.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Measurements (accuracy)}
+  There are three different items that impact the detail and accuracy of the print.
+  \begin{itemize}
+    \item What is the resolution for printing bits of material? (note that x and y resolution may be different)
+    \item What is the smallest bit of material that can be printed?
+    \item What is the layer height?
+  \end{itemize}
+  Some or all of these may be adjustable on your printer.  In general, reducing the resolution makes the print go faster.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Measurements (Resolution)}
+  \begin{figure}
+    \input{Resolution}
+    \caption{Measurements and Resolution}
+  \end{figure}
 \end{frame}
 
 \section{First Layer}
@@ -64,6 +83,11 @@
 \section{Overhangs}
 \begin{frame}
   \frametitle{Overhangs}
+  For some types of printers (typically those that fuse a powder), overhangs and unsupported sections are not a problem.  For the rest, something may need to be done.
 \end{frame}
+
+%
+% Need some figures showing overhangs
+%
 
 \end{document}
