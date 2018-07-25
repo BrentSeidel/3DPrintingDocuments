@@ -1,12 +1,4 @@
 \documentclass[english,10pt]{beamer}
-\usepackage{pstricks}
-\usepackage{graphicx}
-\DeclareGraphicsExtensions{.pdf}
-\DeclareGraphicsRule{.pdf}{pdf}{.pdf}{}
-\DeclareGraphicsExtensions{.jpg}
-\DeclareGraphicsRule{. jpg}{jpg}{. jpg}{}
-\DeclareGraphicsExtensions{.svg}
-\DeclareGraphicsRule{. svg}{svg}{. svg}{}
 
 \title{Design for 3D Printing}
 \input{Common.tex}
@@ -83,11 +75,43 @@
 \section{Overhangs}
 \begin{frame}
   \frametitle{Overhangs}
-  For some types of printers (typically those that fuse a powder), overhangs and unsupported sections are not a problem.  For the rest, something may need to be done.
+  \begin{itemize}
+    \item For some types of printers (typically those that fuse a powder), overhangs and unsupported sections are not a problem.  For the rest, something may need to be done.
+    \item A rule of thumb is that overhangs with an overhang angle less that 45\degree\ can print without too much trouble while larger angles will require support.
+    \item There are test objects available online with varying overhang angles that you can use to see what your printer can do.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Angle of Overhangs}
+  The angle of overhang is important in determining if your print will succeed or not.
+  \begin{figure}
+    \input{Overhang1}
+    \caption{The Angle of Overhang}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Unsupported Sections}
+  If the Angle of Overhang exceeds 90\degree\ the printer will try to start printing a section on thin air (depending on the printer technology).  Thus usually does not end well.
+  \begin{itemize}
+    \item You can choose a printer technology, such as powder fusing methods, where the section would be supported by unfused powder.
+    \item You may be able to reorient your part so there is no longer an unsupported section.
+    \item You may be able to use the slicer program to automatically generate a support structure.
+    \item You may be able to add a support structure to your design.
+    \item Some combination of the above.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Unsupported Sections}
+  \begin{figure}
+    \input{Unsupported}
+    \caption{Unsupported Sections--Desired vs Actual}
+  \end{figure}
 \end{frame}
 
 %
-% Need some figures showing overhangs
+% Need to add some stuff about interior and exterior angles
 %
-
 \end{document}

@@ -1,6 +1,35 @@
+%
+% Common declarations for various 3D printing presentations.  These are grouped here so that all
+% presentations have access to the same set of packages, definitions, and other common information,
+% as well as sharing a common style.
+%
+
+%
+% Common theme
+%
+\usetheme{Antibes}
+\usecolortheme{beaver}
+%\usefonttheme{}
+%
+% Common packages
+%
+\usepackage{pstricks}
+\usepackage{graphicx}
+\usepackage{gensymb}
 \usepackage[yyyymmdd]{datetime}
 \renewcommand{\dateseparator}{-}
-
+%
+% Declare graphics extensions and rules for including figures
+%
+\DeclareGraphicsExtensions{.pdf}
+\DeclareGraphicsRule{.pdf}{pdf}{.pdf}{}
+\DeclareGraphicsExtensions{.jpg}
+\DeclareGraphicsRule{. jpg}{jpg}{. jpg}{}
+\DeclareGraphicsExtensions{.svg}
+\DeclareGraphicsRule{. svg}{svg}{. svg}{}
+%
+% Common information for title pages.
+%
 \author{Brent Seidel\\modestconsulting@gmail.com\\Modest Consulting}
 \institute{Modest Consulting}
 \date{Copyright \today\ CC-BY-SA}
