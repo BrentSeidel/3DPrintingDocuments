@@ -72,6 +72,43 @@
   \end{figure}
 \end{frame}
 
+\section{Corners}
+\begin{frame}
+  \frametitle{Corners}
+  Due to the nature of 3D printing, there are limits to how sharp corners can be made.  In the discussion below, the following definitions are used:
+  \begin{itemize}
+    \item Corner Angle -- The angle of the two sides that come together to make the corner.
+    \item Sharpness -- The size of the fillet formed at the corner.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Corners}
+  Your CAD program may be able to specify infinitely thin lines.  The printer is limited to the smallest printable element size.
+  \begin{itemize}
+    \item Thin dark line -- path from design.
+    \item Thick reddish line -- actual path printed (width of line is the size of the smallest printable element).
+  \end{itemize}
+  \begin{figure}
+%
+% This figure is done as .eps since the InkScape .tex figures do not seem to handle all the line join options
+% properly. 
+%
+    \includegraphics{Corner1.eps}
+    \caption{Design Path vs Actual Printed Path}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Corners--Exterior}
+  Exterior corner sharpness is limited by the size of the smallest printable element.  The smaller the size, the sharper the corner.  While drawing programs may offer several different options for joining lines at corners, the printer can only do a rounded corner.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Corners--Interior}
+  Interior corner sharpness is limited more by the material and the printing process.  Usually, one doesn't want an interior corner to be sharp as it causes a stress concentration thus making the part weaker.  In most cases, one would be more likely to add a fillet to the corner.
+\end{frame}
+
 \section{Overhangs}
 \begin{frame}
   \frametitle{Overhangs}
@@ -99,6 +136,7 @@
     \item You may be able to reorient your part so there is no longer an unsupported section.
     \item You may be able to use the slicer program to automatically generate a support structure.
     \item You may be able to add a support structure to your design.
+    \item You may split your part into multiple pieces that get fastened together later
     \item Some combination of the above.
   \end{itemize}
 \end{frame}
@@ -111,7 +149,18 @@
   \end{figure}
 \end{frame}
 
-%
-% Need to add some stuff about interior and exterior angles
-%
+\begin{frame}
+  \frametitle{Unsupported Sections--Some Fixes}
+  \begin{figure}
+    \input{Unsupport1}
+    \caption{Some Fixes for Unsupported Sections}
+  \end{figure}
+\end{frame}
+
+\section{Tradeoffs}
+\begin{frame}
+  \frametitle{Tradeoffs}
+  Filler text
+\end{frame}
+
 \end{document}
